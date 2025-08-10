@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-export interface ContactInfo {
+interface ContactInfo {
   email: string
   phone: string
   location: string
@@ -11,7 +11,7 @@ export interface ContactInfo {
   linkedin?: string
 }
 
-export interface PersonalInfo {
+interface PersonalInfo {
   name: string
   title: string
   initials: string
@@ -19,7 +19,7 @@ export interface PersonalInfo {
   avatar?: string
 }
 
-export interface Experience {
+interface Experience {
   id: string
   position: string
   company: string
@@ -29,7 +29,7 @@ export interface Experience {
   achievements: string[]
 }
 
-export interface Project {
+interface Project {
   id: string
   name: string
   description: string
@@ -38,7 +38,7 @@ export interface Project {
   github?: string
 }
 
-export interface Education {
+interface Education {
   id: string
   degree: string
   institution: string
@@ -48,26 +48,17 @@ export interface Education {
   honors?: string[]
 }
 
-export interface Certification {
-  id: string
-  name: string
-  issuer: string
-  date: string
-  expiryDate?: string
-  credentialId?: string
-}
-
-export interface SkillCategory {
+interface SkillCategory {
   category: string
   skills: string[]
 }
 
-export interface Language {
+interface Language {
   language: string
   proficiency: "Native" | "Fluent" | "Advanced" | "Intermediate" | "Basic"
 }
 
-export interface CVData {
+interface CVData {
   personalInfo: PersonalInfo
   contactInfo: ContactInfo
   experience: Experience[]
@@ -77,16 +68,9 @@ export interface CVData {
   languages: Language[]
 }
 
-export interface CVTemplateProps {
+interface CVTemplateProps {
   data: CVData
   className?: string
-}
-
-export interface TemplateConfig {
-  id: "minimal", 
-  name: string
-  description: string
-  component: React.ComponentType<CVTemplateProps>
 }
 
 const Data: CVData = {
