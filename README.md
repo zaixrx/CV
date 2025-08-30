@@ -1,1 +1,1 @@
-you can ignore that repo
+you can ignore this repo
